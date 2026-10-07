@@ -271,7 +271,7 @@ body::before {
 
 .section {
     padding: 70px 40px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -318,7 +318,14 @@ body::before {
 
 .card.wide {
     width: 100%;
-    max-width: 520px;
+    max-width: 540px;
+    padding: 30px;
+}
+
+.card.wide h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
 }
 
 .badge {
@@ -362,12 +369,22 @@ body::before {
 }
 
 .card p {
-    line-height: 1.6;
+    line-height: 1.8;
+    margin: 0 0 16px;
 }
 
 .card ul {
-    padding-left: 20px;
-    line-height: 1.6;
+    padding-left: 22px;
+    margin: 0 0 18px;
+    line-height: 1.8;
+}
+
+.card li {
+    margin-bottom: 12px;
+}
+
+.card li:last-child {
+    margin-bottom: 0;
 }
 
 .card li::marker {
