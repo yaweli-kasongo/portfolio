@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets BTS SIO option SISR de Jeremy Yaweli-Kasongo : gestion de parc GLPI (PARCUS) et infrastructure haute disponibilité multi-sites (M2i).">
+    <title>Projets - Portfolio Jeremy Yaweli-Kasongo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+
+<header class="navbar">
+    <div class="logo">JY<span>.Security</span></div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services.html">Compétences</a>
+        <a href="projects.html" class="active">Projets</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section class="section">
+    <h2>Projets BTS SIO – option SISR</h2>
+
+    <p class="text">
+        Deux situations professionnelles réalisées en maquette (VMware) à la CCI Campus Strasbourg,
+        en groupe, avec étude du cahier des charges, budget, planning, schéma réseau,
+        démonstration technique et documentation complète.
+    </p>
+
+    <div class="cards">
+        <div class="card wide">
+            <span class="badge">AP3 · Projet M2i · 2026 (en cours)</span>
+            <h3>Infrastructure haute disponibilité multi-sites</h3>
+            <p>
+                Fournir à un centre de formation un système d’information redondé et sécurisé,
+                avec une liaison chiffrée entre deux sites (Strasbourg et Mulhouse).
+            </p>
+            <ul>
+                <li>VPN IPsec site à site entre deux routeurs/pare-feu pfSense</li>
+                <li>Active Directory : 1 forêt, 4 contrôleurs de domaine Windows Server (GUI et Core)</li>
+                <li>DNS, DHCP avec basculement</li>
+                <li>DFS / DFSR : espace de noms commun et réplication des données entre les 4 serveurs</li>
+                <li>Sauvegarde complète et clichés instantanés sur SAN via iSCSI</li>
+                <li>GPO (lecteurs réseau, restrictions utilisateurs, redirection de dossiers) et règles de pare-feu selon les recommandations de l’ANSSI</li>
+                <li>Plan d’adressage unifié, schéma réseau, budget, diagramme de Gantt et documentation technique</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Windows Server 2022/2025</span>
+                <span class="tag">Active Directory</span>
+                <span class="tag">GPO</span>
+                <span class="tag">DNS / DHCP</span>
+                <span class="tag">DFS / DFSR</span>
+                <span class="tag">iSCSI / SAN</span>
+                <span class="tag">VPN IPsec</span>
+                <span class="tag">pfSense</span>
+                <span class="tag">VMware</span>
+                <span class="tag">ANSSI</span>
+            </div>
+        </div>
+
+        <div class="card wide">
+            <span class="badge">AP2 · PARCUS · 2026</span>
+            <h3>Gestion de parc et support utilisateurs</h3>
+            <p>
+                Création d’une direction des systèmes d’information pour une société de gestion
+                de parkings (83 salariés) : inventorier le parc, outiller le support
+                et améliorer la qualité de service, dans une démarche inspirée d’ITIL.
+            </p>
+            <ul>
+                <li>Serveurs Linux Debian/Ubuntu</li>
+                <li>GLPI : inventaire automatisé, gestion de parc, tickets d’incidents et de demandes, connecté à l’Active Directory</li>
+                <li>Assistance à distance hébergée en interne, conforme au RGPD (consentement de l’utilisateur)</li>
+                <li>Déploiement de logiciels sur les postes</li>
+                <li>Sauvegarde et déploiement d’images système sur Windows 11 Pro</li>
+                <li>Chiffrement des disques avec sauvegarde de la clé de récupération</li>
+                <li>Plan de tests, budget, planning et documentation technique</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Linux Debian / Ubuntu</span>
+                <span class="tag">GLPI</span>
+                <span class="tag">Active Directory</span>
+                <span class="tag">RGPD</span>
+                <span class="tag">ITIL</span>
+                <span class="tag">Windows 11 Pro</span>
+                <span class="tag">Déploiement d’images</span>
+                <span class="tag">VMware</span>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>© 2026 Jeremy Yaweli-Kasongo - Portfolio</p>
+</footer>
+
+</body>
+</html>
