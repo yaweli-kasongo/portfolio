@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
     background: #0c0e24;
     color: #eeeeff;
     overflow-x: hidden;
