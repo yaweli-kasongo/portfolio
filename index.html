@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -26,6 +27,7 @@
 
 <header class="navbar">
     <div class="logo">Jeremy Yaweli-Kasongo</div>
+    <button type="button" id="theme-btn" class="theme-btn" aria-label="Changer de thème"></button>
     <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu">
     <label for="menu-toggle" class="menu-btn" aria-hidden="true"><span></span></label>
     <nav aria-label="Navigation principale">
@@ -66,7 +68,19 @@
         </div>
     </div>
 </section>
-</main>
+
+<section class="section skills" id="competences-cles">
+    <h2>Compétences clés</h2>
+    <div class="chips">
+        <div class="chip"><strong>Linux Debian</strong><span>Ligne de commande, SSH, permissions</span></div>
+        <div class="chip"><strong>Windows Server</strong><span>2022/2025, GUI et Core</span></div>
+        <div class="chip"><strong>Active Directory</strong><span>GPO, DFS / DFSR</span></div>
+        <div class="chip"><strong>Réseau</strong><span>DNS, DHCP, VLAN, adressage IP</span></div>
+        <div class="chip"><strong>VPN IPsec</strong><span>Liaison chiffrée inter-sites</span></div>
+        <div class="chip"><strong>Virtualisation</strong><span>VMware Workstation Pro</span></div>
+    </div>
+    <p class="more"><a class="btn secondary" href="services.html">Voir toutes les compétences</a></p>
+</section></main>
 
 <footer>
     <p>© 2026 Jeremy Yaweli-Kasongo - Portfolio</p>

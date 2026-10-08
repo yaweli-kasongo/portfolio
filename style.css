@@ -9,9 +9,27 @@
     --accent-hover: #b6a6ff;
     --accent-text: #b6a6ff;
     --on-accent: #0c0e24;
+    --nav-bg: rgba(31, 38, 96, 0.78);
+    --glow: 1;
     --radius: 28px;
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
 }
+/* Thème clair (bouton soleil/lune) */
+:root[data-theme="light"] {
+    --bg: #f4f5ff;
+    --surface: #ffffff;
+    --text: #1d1d3a;
+    --text-soft: #4c4c78;
+    --line: rgba(29, 29, 58, 0.14);
+    --accent: #6f4fe0;
+    --accent-rgb: 111, 79, 224;
+    --accent-hover: #5a3fd0;
+    --accent-text: #5a3fd0;
+    --on-accent: #ffffff;
+    --nav-bg: rgba(244, 245, 255, 0.82);
+    --glow: 0.3;
+}
+
 /* ---------------- GLOBAL ---------------- */
 
 * {
@@ -67,6 +85,7 @@ body::before {
     background:
         radial-gradient(ellipse 70% 50% at 50% 0%, rgba(var(--accent-rgb), 0.7), transparent 70%),
         radial-gradient(ellipse 80% 45% at 50% 100%, rgba(60, 180, 225, 0.6), transparent 70%);
+    opacity: var(--glow);
 }
 
 ::-webkit-scrollbar { width: 10px; }
@@ -108,7 +127,7 @@ body::before {
     align-items: center;
     min-height: 52px;
     padding: 0 max(22px, calc((100vw - 1024px) / 2));
-    background: rgba(31, 38, 96, 0.78);
+    background: var(--nav-bg);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid var(--line);
@@ -557,5 +576,103 @@ footer p {
         padding: 14px 0;
         font-size: 1.0625rem;
         border-top: 1px solid var(--line);
+    }
+}
+
+/* ---------------- BOUTON THEME ---------------- */
+
+.logo {
+    margin-right: auto;
+}
+
+.navbar nav {
+    order: 2;
+}
+
+.theme-btn {
+    order: 3;
+    width: 36px;
+    height: 36px;
+    margin-left: 18px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.theme-btn:hover {
+    background: rgba(var(--accent-rgb), 0.15);
+    border-color: var(--accent);
+}
+
+.theme-btn:focus-visible {
+    outline: 3px solid rgba(var(--accent-rgb), 0.7);
+    outline-offset: 2px;
+}
+
+/* ---------------- COMPETENCES CLES (accueil) ---------------- */
+
+.section.skills {
+    min-height: 0;
+    padding-top: 40px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.chip {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 220px;
+    padding: 24px 22px;
+    border-radius: 22px;
+    background: var(--surface);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chip:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.35);
+}
+
+.chip strong {
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    color: var(--text);
+}
+
+.chip span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-soft);
+}
+
+.more {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .theme-btn {
+        position: absolute;
+        top: 8px;
+        right: 60px;
+        margin: 0;
+    }
+
+    .chip {
+        width: 100%;
+        max-width: 420px;
     }
 }
