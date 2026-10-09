@@ -30,3 +30,46 @@
         refresh();
     });
 })();
+/* Effets visuels : apparition au defilement et halo qui suit la souris */
+(function () {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) { return; }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var root = document.documentElement;
+
+        if (window.matchMedia("(hover: hover)").matches) {
+            var raf = null, x = 0, y = 0;
+            window.addEventListener("pointermove", function (e) {
+                x = e.clientX; y = e.clientY;
+                if (raf) { return; }
+                raf = requestAnimationFrame(function () {
+                    root.style.setProperty("--mx", x + "px");
+                    root.style.setProperty("--my", y + "px");
+                    raf = null;
+                });
+            }, { passive: true });
+        }
+
+        if (!("IntersectionObserver" in window)) { return; }
+        var items = document.querySelectorAll(".section h2, .section .text, .card, .chip, .more");
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) { return; }
+                var el = entry.target;
+                io.unobserve(el);
+                el.classList.add("in");
+                setTimeout(function () {
+                    el.classList.remove("reveal", "in");
+                    el.style.transitionDelay = "";
+                }, 1100);
+            });
+        }, { threshold: 0.12 });
+
+        items.forEach(function (el, i) {
+            el.classList.add("reveal");
+            el.style.transitionDelay = ((i % 4) * 90) + "ms";
+            io.observe(el);
+        });
+    });
+})();

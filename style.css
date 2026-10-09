@@ -677,3 +677,279 @@ footer p {
         max-width: 420px;
     }
 }
+/* =====================================================================
+   THEME FUTURISTE (par-dessus la mise en page Apple)
+   ===================================================================== */
+
+:root {
+    --cyan: #4fd8ff;
+    --cyan-rgb: 79, 216, 255;
+    --glass: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+    --on-grad: #06101f;
+    --font-head: "Space Grotesk", "Inter", -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", "Consolas", monospace;
+}
+
+:root[data-theme="light"] {
+    --cyan: #0b7da3;
+    --cyan-rgb: 11, 125, 163;
+    --glass: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(111, 79, 224, 0.28);
+    --card-shadow: 0 8px 28px rgba(60, 40, 140, 0.14);
+    --on-grad: #ffffff;
+}
+
+::selection {
+    background: rgba(var(--accent-rgb), 0.45);
+    color: var(--text);
+}
+
+h1, h2, h3, .logo, .btn, .chip strong {
+    font-family: var(--font-head);
+}
+
+/* ---- Fond : grille animée + halo qui suit la souris ---- */
+.scanlines {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(var(--accent-rgb), 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(var(--accent-rgb), 0.09) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 25%, #000 15%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 25%, #000 15%, transparent 75%);
+    animation: gridDrift 24s linear infinite;
+}
+
+@keyframes gridDrift {
+    to { background-position: 56px 56px; }
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 30%), rgba(var(--accent-rgb), 0.16), transparent 60%);
+}
+
+/* ---- Barre de navigation ---- */
+.navbar {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.8), rgba(var(--cyan-rgb), 0.8), transparent) 1;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    background: linear-gradient(90deg, var(--accent), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar nav a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+.navbar nav a.active {
+    color: var(--cyan);
+    text-shadow: 0 0 12px rgba(var(--cyan-rgb), 0.6);
+}
+
+/* ---- Accueil ---- */
+.hello {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cyan);
+}
+
+.hello::before {
+    content: "> ";
+}
+
+.name {
+    background: linear-gradient(100deg, var(--text) 0%, var(--accent) 40%, var(--cyan) 65%, var(--text) 100%);
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 9s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 220% center; }
+}
+
+.role {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    color: var(--cyan);
+}
+
+.role::after {
+    content: "\2588";
+    margin-left: 6px;
+    font-size: 0.8em;
+    animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Anneau lumineux qui tourne autour de la photo */
+.hero-right {
+    position: relative;
+    padding: 7px;
+}
+
+.hero-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--accent), var(--cyan), rgba(var(--accent-rgb), 0.1), var(--accent));
+    filter: drop-shadow(0 0 20px rgba(var(--accent-rgb), 0.7));
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.photo-frame {
+    position: relative;
+    z-index: 1;
+    border: 4px solid var(--bg);
+    box-shadow: 0 0 70px rgba(var(--accent-rgb), 0.45);
+}
+
+/* ---- Titres de sections ---- */
+.section h2 {
+    background: linear-gradient(90deg, var(--text), var(--accent) 65%, var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---- Cartes en verre avec bordure lumineuse ---- */
+.card,
+.chip {
+    position: relative;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: var(--card-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.card::before,
+.chip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.9), transparent 40%, rgba(var(--cyan-rgb), 0.7));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    pointer-events: none;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+}
+
+.card:hover,
+.chip:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 44px rgba(var(--accent-rgb), 0.4), 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover::before,
+.chip:hover::before {
+    opacity: 1;
+}
+
+.badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border: 1px solid rgba(var(--cyan-rgb), 0.45);
+    border-radius: 6px;
+    background: rgba(var(--cyan-rgb), 0.1);
+    color: var(--cyan);
+}
+
+.tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    background: rgba(var(--accent-rgb), 0.14);
+    border: 1px solid rgba(var(--accent-rgb), 0.4);
+    color: var(--text);
+}
+
+/* ---- Boutons ---- */
+.btn.primary {
+    border-color: transparent;
+    background: linear-gradient(120deg, var(--accent), var(--cyan));
+    color: var(--on-grad);
+    font-weight: 600;
+    box-shadow: 0 0 26px rgba(var(--accent-rgb), 0.55);
+}
+
+.btn.primary:hover {
+    background: linear-gradient(120deg, var(--accent), var(--cyan));
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(var(--cyan-rgb), 0.6);
+}
+
+.btn.secondary {
+    color: var(--cyan);
+    border-color: rgba(var(--cyan-rgb), 0.6);
+    background: rgba(var(--cyan-rgb), 0.06);
+}
+
+.btn.secondary:hover {
+    background: rgba(var(--cyan-rgb), 0.18);
+    color: var(--text);
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px rgba(var(--cyan-rgb), 0.4);
+}
+
+.contact-list .label {
+    font-family: var(--font-mono);
+    color: var(--cyan);
+}
+
+footer {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+}
+
+/* ---- Apparition au defilement (ajoutee par script.js) ---- */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.in {
+    opacity: 1;
+    transform: none;
+}
+/* Evite un double fondu : les elements apparaissent un par un via script.js */
+.section {
+    animation: none;
+}
