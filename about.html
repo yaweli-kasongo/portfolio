@@ -17,8 +17,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
-    <script src="script.js?v=5"></script>
+    <link rel="stylesheet" href="style.css?v=7">
+    <script src="script.js?v=7"></script>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 </header>
 
 <main id="contenu">
-<section class="section">
+<section class="section about">
     <h2>À propos</h2>
 
     <p class="text">
@@ -53,38 +53,60 @@
         Je suis motivé, rigoureux, curieux et déterminé à évoluer dans le domaine de la sécurité informatique.
     </p>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Formation</h3>
-            <ul>
-                <li>Bac Pro SN – Lycée Marcel Rudloff</li>
-                <li>BTS SIO option SISR en alternance – CCI Campus Strasbourg (2025 – 2027)</li>
-                <li>Bachelor AIS (3e année) – rentrée visée : 2027</li>
-            </ul>
-        </div>
+    <ol class="timeline" aria-label="Parcours">
+        <li class="tl-item">
+            <span class="tl-date">Sept. 2024 – juil. 2025</span>
+            <span class="tl-dot"></span>
+            <div class="card tl-body">
+                <h3>Technicien informatique en alternance</h3>
+                <p>NLMK (production d’acier), Strasbourg</p>
+            </div>
+        </li>
+        <li class="tl-item">
+            <span class="tl-date">2025</span>
+            <span class="tl-dot"></span>
+            <div class="card tl-body">
+                <h3>Bac Pro Systèmes Numériques</h3>
+                <p>Lycée Marcel Rudloff, Strasbourg</p>
+            </div>
+        </li>
+        <li class="tl-item">
+            <span class="tl-date">2025 – 2027</span>
+            <span class="tl-dot"></span>
+            <div class="card tl-body">
+                <h3>BTS SIO option SISR en alternance</h3>
+                <p>CCI Campus Strasbourg (en cours)</p>
+            </div>
+        </li>
+        <li class="tl-item">
+            <span class="tl-date">Sept. 2025 – juil. 2027</span>
+            <span class="tl-dot"></span>
+            <div class="card tl-body">
+                <h3>Technicien informatique en alternance</h3>
+                <p>Tessi, Schiltigheim</p>
+            </div>
+        </li>
+        <li class="tl-item next">
+            <span class="tl-date">Rentrée visée : 2027</span>
+            <span class="tl-dot"></span>
+            <div class="card tl-body">
+                <h3>Bachelor AIS (3e année)</h3>
+                <p>Administrateur d’Infrastructures Sécurisées, en alternance</p>
+            </div>
+        </li>
+    </ol>
 
-        <div class="card">
-            <h3>Expériences</h3>
-            <ul>
-                <li>Technicien informatique en alternance – Tessi, Schiltigheim (sept. 2025 – juil. 2027)</li>
-                <li>Technicien informatique en alternance – NLMK (production d’acier), Strasbourg (sept. 2024 – juil. 2025)</li>
-            </ul>
-        </div>
+    <div class="card goal">
+        <h3>Objectif</h3>
+        <p>Intégrer une entreprise en alternance pour ma 3e année de Bachelor AIS afin de développer mes compétences en administration système et réseau.</p>
+        <p>À terme, je souhaite me spécialiser dans l’environnement Linux et devenir administrateur système Linux.</p>
+    </div>
 
-        <div class="card">
-            <h3>Qualités</h3>
-            <ul>
-                <li>Rigueur et sens de l’organisation</li>
-                <li>Curiosité et patience</li>
-                <li>Esprit d’équipe</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3>Objectif</h3>
-            <p>Intégrer une entreprise en alternance pour ma 3e année de Bachelor AIS afin de développer mes compétences en administration système et réseau.</p>
-            <p>À terme, je souhaite me spécialiser dans l’environnement Linux et devenir administrateur système Linux.</p>
-        </div>
+    <h3 class="sub">Qualités</h3>
+    <div class="pills">
+        <span class="pill">Rigueur et sens de l’organisation</span>
+        <span class="pill">Curiosité et patience</span>
+        <span class="pill">Esprit d’équipe</span>
     </div>
 </section>
 </main>

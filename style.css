@@ -953,3 +953,274 @@ footer {
 .section {
     animation: none;
 }
+
+/* =====================================================================
+   MISES EN PAGE PROPRES A CHAQUE PAGE
+   ===================================================================== */
+
+/* ---- Elements communs : pastilles ---- */
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pill {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(var(--accent-rgb), 0.14);
+    border: 1px solid rgba(var(--accent-rgb), 0.4);
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: var(--text);
+}
+
+.sub {
+    margin: 48px 0 18px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+}
+
+/* ---- A PROPOS : frise chronologique ---- */
+.timeline {
+    position: relative;
+    list-style: none;
+    max-width: 880px;
+    margin: 0 auto 48px;
+    padding: 0;
+    text-align: left;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    bottom: 14px;
+    left: calc(170px + 14px);
+    width: 2px;
+    background: linear-gradient(var(--accent), var(--cyan));
+    opacity: 0.6;
+}
+
+.tl-item {
+    display: grid;
+    grid-template-columns: 170px 28px 1fr;
+    align-items: start;
+    margin-bottom: 22px;
+}
+
+.tl-date {
+    padding: 18px 12px 0 0;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--cyan);
+}
+
+.tl-dot {
+    position: relative;
+    z-index: 1;
+    width: 14px;
+    height: 14px;
+    margin: 22px auto 0;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 14px rgba(var(--cyan-rgb), 0.9);
+}
+
+.tl-item.next .tl-dot {
+    background: var(--accent);
+    box-shadow: 0 0 18px rgba(var(--accent-rgb), 1);
+    animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+    50% { transform: scale(1.5); }
+}
+
+.timeline .card {
+    width: auto;
+    padding: 18px 24px;
+}
+
+.timeline .card h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+}
+
+.timeline .card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+}
+
+.timeline .tl-item.next .card {
+    border-color: rgba(var(--accent-rgb), 0.7);
+    box-shadow: 0 0 34px rgba(var(--accent-rgb), 0.3);
+}
+
+.goal {
+    width: auto;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 36px 40px;
+    text-align: center;
+}
+
+.goal h3 {
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, var(--accent), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.goal p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.goal p:last-child {
+    margin-bottom: 0;
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* ---- COMPETENCES : grille de blocs ---- */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.skill-block {
+    width: auto;
+    padding: 28px 26px;
+}
+
+.skill-block .pills {
+    justify-content: flex-start;
+}
+
+.skill-block .num {
+    display: block;
+    margin-bottom: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--cyan);
+}
+
+.skill-block h3 {
+    margin-bottom: 16px;
+    font-size: 1.35rem;
+}
+
+/* ---- PROJETS : grands panneaux a deux colonnes ---- */
+.case-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.case {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    width: 100%;
+    padding: 38px 40px;
+    text-align: left;
+}
+
+.case:nth-child(even) .case-head {
+    order: 2;
+}
+
+.case:hover {
+    transform: translateY(-3px);
+}
+
+.case h3 {
+    font-size: 1.55rem;
+    line-height: 1.25;
+}
+
+.case-points {
+    margin: 0;
+    align-self: center;
+}
+
+.case-points li {
+    margin-bottom: 14px;
+}
+
+/* ---- CONTACT : grande carte centrale ---- */
+.contact-card {
+    width: auto;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 44px 40px;
+    text-align: center;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.contact-card .contact-list {
+    padding-top: 24px;
+    border-top: 1px solid var(--glass-border);
+    text-align: left;
+    display: inline-block;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 800px) {
+    .case {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 28px 24px;
+    }
+
+    .case:nth-child(even) .case-head {
+        order: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .timeline::before {
+        left: 11px;
+    }
+
+    .tl-item {
+        grid-template-columns: 24px 1fr;
+        grid-template-areas: "dot date" "dot body";
+        column-gap: 12px;
+    }
+
+    .tl-dot { grid-area: dot; margin: 6px 0 0; }
+    .tl-date { grid-area: date; padding: 0 0 6px; text-align: left; }
+    .tl-body { grid-area: body; }
+
+    .goal,
+    .contact-card {
+        padding: 28px 22px;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+}

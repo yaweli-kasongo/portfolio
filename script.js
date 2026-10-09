@@ -71,5 +71,12 @@
             el.style.transitionDelay = ((i % 4) * 90) + "ms";
             io.observe(el);
         });
+
+        /* securite anti-blocage : si l'observateur n'a rien declenche apres 4 s, on affiche ce qui est a l'ecran */
+        setTimeout(function () {
+            document.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+                if (el.getBoundingClientRect().top < window.innerHeight * 1.2) { el.classList.add('in'); }
+            });
+        }, 4000);
     });
 })();

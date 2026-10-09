@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
-    <script src="script.js?v=5"></script>
+    <link rel="stylesheet" href="style.css?v=7">
+    <script src="script.js?v=7"></script>
 </head>
 <body>
 
@@ -49,89 +49,95 @@
         démonstration technique et documentation complète.
     </p>
 
-    <div class="cards">
-        <div class="card wide">
-            <span class="badge">AP3 · Projet M2i · 2026 (en cours)</span>
-            <h3>Infrastructure haute disponibilité multi-sites</h3>
-            <p>
-                Fournir à un centre de formation un système d’information redondé et sécurisé,
-                avec une liaison chiffrée entre deux sites (Strasbourg et Mulhouse).
-            </p>
-            <ul>
+    <div class="case-list">
+        <article class="card case">
+            <div class="case-head">
+                <span class="badge">AP3 · Projet M2i · 2026 (en cours)</span>
+                <h3>Infrastructure haute disponibilité multi-sites</h3>
+                <p>
+                    Fournir à un centre de formation un système d’information redondé et sécurisé,
+                    avec une liaison chiffrée entre deux sites (Strasbourg et Mulhouse).
+                </p>
+                <div class="tags">
+                    <span class="tag">Windows Server 2022/2025</span>
+                    <span class="tag">Active Directory</span>
+                    <span class="tag">GPO</span>
+                    <span class="tag">DNS / DHCP</span>
+                    <span class="tag">DFS / DFSR</span>
+                    <span class="tag">iSCSI / SAN</span>
+                    <span class="tag">VPN IPsec</span>
+                    <span class="tag">pfSense</span>
+                    <span class="tag">VMware</span>
+                    <span class="tag">ANSSI</span>
+                </div>
+            </div>
+            <ul class="case-points">
                 <li>VPN IPsec site à site entre deux routeurs/pare-feu pfSense</li>
                 <li>Active Directory : 4 contrôleurs de domaine Windows Server (GUI et Core), DNS, DHCP avec basculement</li>
                 <li>DFS / DFSR : espace de noms commun et réplication des données entre les 4 serveurs</li>
                 <li>Sauvegarde complète et clichés instantanés sur SAN via iSCSI</li>
                 <li>GPO et règles de pare-feu selon les recommandations de l’ANSSI</li>
             </ul>
-            <div class="tags">
-                <span class="tag">Windows Server 2022/2025</span>
-                <span class="tag">Active Directory</span>
-                <span class="tag">GPO</span>
-                <span class="tag">DNS / DHCP</span>
-                <span class="tag">DFS / DFSR</span>
-                <span class="tag">iSCSI / SAN</span>
-                <span class="tag">VPN IPsec</span>
-                <span class="tag">pfSense</span>
-                <span class="tag">VMware</span>
-                <span class="tag">ANSSI</span>
-            </div>
-        </div>
+        </article>
 
-        <div class="card wide">
-            <span class="badge">AP2 · PARCUS · 2026</span>
-            <h3>Gestion de parc et support utilisateurs</h3>
-            <p>
-                Création d’une direction des systèmes d’information pour une société de gestion
-                de parkings (83 salariés) : inventorier le parc, outiller le support
-                et améliorer la qualité de service, dans une démarche inspirée d’ITIL.
-            </p>
-            <ul>
+        <article class="card case">
+            <div class="case-head">
+                <span class="badge">AP2 · PARCUS · 2026</span>
+                <h3>Gestion de parc et support utilisateurs</h3>
+                <p>
+                    Création d’une direction des systèmes d’information pour une société de gestion
+                    de parkings (83 salariés) : inventorier le parc, outiller le support
+                    et améliorer la qualité de service, dans une démarche inspirée d’ITIL.
+                </p>
+                <div class="tags">
+                    <span class="tag">Linux Debian / Ubuntu</span>
+                    <span class="tag">GLPI</span>
+                    <span class="tag">Active Directory</span>
+                    <span class="tag">RGPD</span>
+                    <span class="tag">ITIL</span>
+                    <span class="tag">Windows 11 Pro</span>
+                    <span class="tag">Déploiement d’images</span>
+                    <span class="tag">VMware</span>
+                </div>
+            </div>
+            <ul class="case-points">
                 <li>Serveurs Linux Debian/Ubuntu</li>
                 <li>GLPI : inventaire automatisé, gestion de parc et tickets, connecté à l’Active Directory</li>
                 <li>Assistance à distance hébergée en interne, conforme au RGPD</li>
                 <li>Déploiement de logiciels et d’images système sur Windows 11 Pro</li>
                 <li>Chiffrement des disques avec sauvegarde de la clé de récupération</li>
             </ul>
-            <div class="tags">
-                <span class="tag">Linux Debian / Ubuntu</span>
-                <span class="tag">GLPI</span>
-                <span class="tag">Active Directory</span>
-                <span class="tag">RGPD</span>
-                <span class="tag">ITIL</span>
-                <span class="tag">Windows 11 Pro</span>
-                <span class="tag">Déploiement d’images</span>
-                <span class="tag">VMware</span>
-            </div>
-        </div>
+        </article>
 
-        <div class="card wide">
-            <span class="badge">Projet personnel · en cours</span>
-            <h3>Serveur Linux Debian sécurisé</h3>
-            <p>
-                Montage d’un serveur Debian sans interface graphique, comme en entreprise,
-                dans une machine virtuelle VMware, pour me former à l’administration Linux.
-            </p>
-            <ul>
+        <article class="card case">
+            <div class="case-head">
+                <span class="badge">Projet personnel · en cours</span>
+                <h3>Serveur Linux Debian sécurisé</h3>
+                <p>
+                    Montage d’un serveur Debian sans interface graphique, comme en entreprise,
+                    dans une machine virtuelle VMware, pour me former à l’administration Linux.
+                </p>
+                <div class="tags">
+                    <span class="tag">Debian</span>
+                    <span class="tag">SSH</span>
+                    <span class="tag">ufw</span>
+                    <span class="tag">fail2ban</span>
+                    <span class="tag">Apache</span>
+                    <span class="tag">HTTPS</span>
+                    <span class="tag">rsync</span>
+                    <span class="tag">cron</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">VMware</span>
+                </div>
+            </div>
+            <ul class="case-points">
                 <li>Connexion SSH par clés, sans mot de passe ni accès root</li>
                 <li>Pare-feu ufw et protection fail2ban</li>
                 <li>Site web Apache en HTTPS</li>
                 <li>Sauvegarde automatique avec rsync et cron, avec test de restauration</li>
                 <li>Supervision du serveur et script Bash de rapport quotidien</li>
             </ul>
-            <div class="tags">
-                <span class="tag">Debian</span>
-                <span class="tag">SSH</span>
-                <span class="tag">ufw</span>
-                <span class="tag">fail2ban</span>
-                <span class="tag">Apache</span>
-                <span class="tag">HTTPS</span>
-                <span class="tag">rsync</span>
-                <span class="tag">cron</span>
-                <span class="tag">Bash</span>
-                <span class="tag">VMware</span>
-            </div>
-        </div>
+        </article>
     </div>
 </section>
 </main>
