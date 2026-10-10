@@ -1274,3 +1274,72 @@ footer {
         margin: 0;
     }
 }
+/* =====================================================================
+   LANGUES : police arabe et affichage de droite a gauche (RTL)
+   ===================================================================== */
+
+:root[lang="ar"] {
+    --font: "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+    --font-head: "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+    --font-mono: "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+}
+
+/* L'espacement entre lettres casse la liaison des lettres arabes */
+:root[lang="ar"] * {
+    letter-spacing: 0 !important;
+}
+
+:root[dir="rtl"] .logo { margin-right: 0; margin-left: auto; }
+:root[dir="rtl"] .theme-btn,
+:root[dir="rtl"] .lang-select { margin-left: 0; margin-right: 14px; }
+
+:root[dir="rtl"] .lang-select {
+    padding: 0 14px 0 28px;
+    background-position: left 10px center;
+}
+
+:root[dir="rtl"] .card,
+:root[dir="rtl"] .case,
+:root[dir="rtl"] .skill-block,
+:root[dir="rtl"] .timeline,
+:root[dir="rtl"] .contact-card .contact-list {
+    text-align: right;
+}
+
+:root[dir="rtl"] .card ul,
+:root[dir="rtl"] .case-points {
+    padding-left: 0;
+    padding-right: 22px;
+}
+
+/* Frise : la ligne et les dates passent a droite */
+:root[dir="rtl"] .timeline::before {
+    left: auto;
+    right: calc(170px + 14px);
+}
+
+:root[dir="rtl"] .tl-date {
+    padding: 18px 0 0 12px;
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    :root[dir="rtl"] .timeline::before {
+        right: 11px;
+        left: auto;
+    }
+
+    :root[dir="rtl"] .tl-date {
+        padding: 0 0 6px;
+        text-align: right;
+    }
+
+    :root[dir="rtl"] .theme-btn,
+    :root[dir="rtl"] .lang-select {
+        margin: 0;
+    }
+
+    :root[dir="rtl"] .theme-btn { right: auto; left: 60px; }
+    :root[dir="rtl"] .lang-select { right: auto; left: 108px; }
+    :root[dir="rtl"] .menu-toggle { right: auto; left: 12px; }
+}
