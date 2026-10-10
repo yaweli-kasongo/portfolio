@@ -1224,3 +1224,53 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ---- Liste de choix de la langue ---- */
+.lang-select {
+    order: 3;
+    height: 36px;
+    margin-left: 14px;
+    padding: 0 28px 0 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%234fd8ff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.lang-select:hover {
+    background-color: rgba(var(--accent-rgb), 0.15);
+    border-color: var(--accent);
+}
+
+.lang-select:focus-visible {
+    outline: 3px solid rgba(var(--accent-rgb), 0.7);
+    outline-offset: 2px;
+}
+
+.lang-select option {
+    background: #1f2660;
+    color: #eeeeff;
+}
+
+:root[data-theme="light"] .lang-select option {
+    background: #ffffff;
+    color: #1d1d3a;
+}
+
+@media (max-width: 700px) {
+    .lang-select {
+        position: absolute;
+        top: 8px;
+        right: 108px;
+        margin: 0;
+    }
+}

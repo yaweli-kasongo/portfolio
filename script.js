@@ -15,7 +15,8 @@
         function refresh() {
             var dark = current() === "dark";
             btn.textContent = dark ? "\u2600" : "\u263E";
-            btn.setAttribute("aria-label", dark ? "Passer au thème clair" : "Passer au thème sombre");
+            var label = dark ? "Passer au thème clair" : "Passer au thème sombre";
+            btn.setAttribute("aria-label", window.i18n ? window.i18n.t(label) : label);
             var meta = document.querySelector('meta[name="theme-color"]');
             if (meta) { meta.setAttribute("content", dark ? "#1f2660" : "#f4f5ff"); }
         }
@@ -28,6 +29,7 @@
         });
 
         refresh();
+        document.addEventListener("langchange", refresh);
     });
 })();
 /* Effets visuels : apparition au defilement et halo qui suit la souris */
