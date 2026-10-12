@@ -99,6 +99,10 @@
         ["Curiosité et patience", "Curiosity and patience", "Neugier und Geduld", "Curiosidad y paciencia", "Curiosidade e paciência", "Περιέργεια και υπομονή", "Любознательность и терпение", "الفضول والصبر"],
         ["Esprit d’équipe", "Team spirit", "Teamgeist", "Espíritu de equipo", "Espírito de equipa", "Ομαδικό πνεύμα", "Командный дух", "روح الفريق"],
 
+        /* ---- Fenetre des competences ---- */
+        ["Voir les compétences", "View skills", "Kompetenzen ansehen", "Ver competencias", "Ver competências", "Δείτε τις δεξιότητες", "Показать навыки", "عرض المهارات"],
+        ["Fermer", "Close", "Schließen", "Cerrar", "Fechar", "Κλείσιμο", "Закрыть", "إغلاق"],
+
         /* ---- Missions (Tessi, NLMK) ---- */
         ["Alternance en soutien à l’administrateur réseau et systèmes", "Work-study placement supporting the network and systems administrator", "Duale Ausbildung zur Unterstützung des Netzwerk- und Systemadministrators", "Formación dual de apoyo al administrador de redes y sistemas", "Alternância de apoio ao administrador de redes e sistemas", "Εναλλασσόμενη εκπαίδευση ως υποστήριξη του διαχειριστή δικτύων και συστημάτων", "Дуальное обучение в помощь администратору сетей и систем", "تدريب متناوب لمساندة مدير الشبكات والأنظمة"],
         ["Découverte du métier et accompagnement de l’administrateur dans ses tâches", "Discovering the profession and assisting the administrator with their tasks", "Einblick in den Beruf und Begleitung bei den täglichen Aufgaben des Administrators", "Descubrimiento del oficio y acompañamiento del administrador en sus tareas", "Descoberta da profissão e acompanhamento do administrador nas suas tarefas", "Γνωριμία με το επάγγελμα και συνοδεία του διαχειριστή στις καθημερινές εργασίες", "Знакомство с профессией и помощь администратору в рабочих задачах", "التعرّف على المهنة ومرافقة المدير في مهام العمل"],

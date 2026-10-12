@@ -82,3 +82,42 @@
         }, 4000);
     });
 })();
+/* Fenetre des competences : un clic sur un bloc ouvre ses competences, le fond s'assombrit */
+(function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        var dlg = document.getElementById("skill-dialog");
+        if (!dlg || typeof dlg.showModal !== "function") { return; }
+
+        var blocks = document.querySelectorAll(".skill-block");
+        var num = document.getElementById("skill-dialog-num");
+        var title = document.getElementById("skill-dialog-title");
+        var pills = document.getElementById("skill-dialog-pills");
+
+        function openFor(block) {
+            num.textContent = block.querySelector(".num").textContent;
+            title.textContent = block.querySelector("h3").textContent;
+            pills.innerHTML = "";
+            Array.prototype.forEach.call(block.querySelectorAll(".pills .pill"), function (p) {
+                pills.appendChild(p.cloneNode(true));
+            });
+            dlg.showModal();
+        }
+
+        Array.prototype.forEach.call(blocks, function (block) {
+            block.addEventListener("click", function () { openFor(block); });
+            block.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openFor(block); }
+            });
+        });
+
+        dlg.querySelector(".dlg-close").addEventListener("click", function () { dlg.close(); });
+
+        /* clic en dehors de la fenetre = fermer */
+        dlg.addEventListener("click", function (e) {
+            if (e.target === dlg) { dlg.close(); }
+        });
+
+        /* le contenu copie ne suivrait pas un changement de langue : on ferme */
+        document.addEventListener("langchange", function () { if (dlg.open) { dlg.close(); } });
+    });
+})();
