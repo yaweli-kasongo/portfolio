@@ -94,6 +94,9 @@
         ["Curiosité et patience", "Curiosity and patience", "Neugier und Geduld", "Curiosidad y paciencia", "Curiosidade e paciência", "Περιέργεια και υπομονή", "Любознательность и терпение"],
         ["Esprit d’équipe", "Team spirit", "Teamgeist", "Espíritu de equipo", "Espírito de equipa", "Ομαδικό πνεύμα", "Командный дух"],
 
+        /* ---- Telechargement du CV ---- */
+        ["Télécharger mon CV (PDF)", "Download my CV (PDF)", "Meinen Lebenslauf herunterladen (PDF)", "Descargar mi CV (PDF)", "Descarregar o meu CV (PDF)", "Λήψη του βιογραφικού μου (PDF)", "Скачать моё резюме (PDF)"],
+
         /* ---- Fenetre des competences ---- */
         ["Voir les compétences", "View skills", "Kompetenzen ansehen", "Ver competencias", "Ver competências", "Δείτε τις δεξιότητες", "Показать навыки"],
         ["Fermer", "Close", "Schließen", "Cerrar", "Fechar", "Κλείσιμο", "Закрыть"],
