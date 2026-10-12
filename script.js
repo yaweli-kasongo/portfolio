@@ -18,7 +18,7 @@
             var label = dark ? "Passer au thème clair" : "Passer au thème sombre";
             btn.setAttribute("aria-label", window.i18n ? window.i18n.t(label) : label);
             var meta = document.querySelector('meta[name="theme-color"]');
-            if (meta) { meta.setAttribute("content", dark ? "#1f2660" : "#f4f5ff"); }
+            if (meta) { meta.setAttribute("content", dark ? "#2c3786" : "#f4f5ff"); }
         }
 
         btn.addEventListener("click", function () {

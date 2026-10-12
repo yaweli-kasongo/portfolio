@@ -1,6 +1,6 @@
 :root {
-    --bg: #1f2660;
-    --surface: #2e3078;
+    --bg: #2c3786;
+    --surface: #3b46a3;
     --text: #eeeeff;
     --text-soft: #c9c3ff;
     --line: rgba(255, 255, 255, 0.14);
@@ -9,7 +9,7 @@
     --accent-hover: #b6a6ff;
     --accent-text: #b6a6ff;
     --on-accent: #0c0e24;
-    --nav-bg: rgba(31, 38, 96, 0.78);
+    --nav-bg: rgba(44, 55, 134, 0.82);
     --glow: 1;
     --radius: 28px;
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -1257,7 +1257,7 @@ footer {
 }
 
 .lang-select option {
-    background: #1f2660;
+    background: #2c3786;
     color: #eeeeff;
 }
 
