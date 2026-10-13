@@ -94,6 +94,8 @@
         ["Curiosité et patience", "Curiosity and patience", "Neugier und Geduld", "Curiosidad y paciencia", "Curiosidade e paciência", "Περιέργεια και υπομονή", "Любознательность и терпение"],
         ["Esprit d’équipe", "Team spirit", "Teamgeist", "Espíritu de equipo", "Espírito de equipa", "Ομαδικό πνεύμα", "Командный дух"],
 
+        ["Droits d’administration sur les postes de travail du site (installation de logiciels, mises à jour, dépannage)", "Administrator rights on the site's workstations (software installation, updates, troubleshooting)", "Administratorrechte auf den Arbeitsplätzen des Standorts (Softwareinstallation, Updates, Fehlerbehebung)", "Derechos de administración en los puestos de trabajo del sitio (instalación de software, actualizaciones, resolución de incidencias)", "Direitos de administração nos postos de trabalho do local (instalação de software, atualizações, resolução de problemas)", "Δικαιώματα διαχειριστή στους σταθμούς εργασίας της εγκατάστασης (εγκατάσταση λογισμικού, ενημερώσεις, αντιμετώπιση προβλημάτων)", "Права администратора на рабочих местах площадки (установка ПО, обновления, диагностика и устранение неполадок)"],
+
         /* ---- Telechargement du CV ---- */
         ["Télécharger mon CV (PDF)", "Download my CV (PDF)", "Meinen Lebenslauf herunterladen (PDF)", "Descargar mi CV (PDF)", "Descarregar o meu CV (PDF)", "Λήψη του βιογραφικού μου (PDF)", "Скачать моё резюме (PDF)"],
 
